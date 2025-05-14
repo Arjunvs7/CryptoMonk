@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -77,12 +78,23 @@ export function DataTable<TData extends UserData, TValue>({
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     globalFilterFn: (row, columnId, filterValue) => {
-        const name = row.getValue("name") as string || "";
-        const email = row.getValue("email") as string || "";
-        const phone = row.getValue("phone") as string || "";
-        return name.toLowerCase().includes(filterValue.toLowerCase()) ||
-               email.toLowerCase().includes(filterValue.toLowerCase()) ||
-               phone.toLowerCase().includes(filterValue.toLowerCase());
+        const searchStr = filterValue.toLowerCase();
+
+        const name = (row.getValue("name") as string || "").toLowerCase();
+        const email = (row.getValue("email") as string || "").toLowerCase();
+        const phone = (row.getValue("phone") as string || "").toLowerCase();
+        const place = (row.getValue("place") as string || "").toLowerCase();
+        const gender = (row.getValue("gender") as string || "").toLowerCase();
+        const hobbies = (row.getValue("hobbies") as string[] || []).join(" ").toLowerCase();
+
+        if (name.includes(searchStr)) return true;
+        if (email.includes(searchStr)) return true;
+        if (phone.includes(searchStr)) return true;
+        if (place.includes(searchStr)) return true;
+        if (gender.includes(searchStr)) return true;
+        if (hobbies.includes(searchStr)) return true;
+        
+        return false;
     }
   });
 

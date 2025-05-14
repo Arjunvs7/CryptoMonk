@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { Table } from "@tanstack/react-table";
@@ -34,10 +35,10 @@ export function DataTableToolbar<TData>({
     <div className="flex items-center justify-between p-4 border-b">
       <div className="flex flex-1 items-center space-x-2 flex-wrap gap-2">
         <Input
-          placeholder="Filter by name, email, phone..."
+          placeholder="Filter by name, email, phone, hobbies, place, gender..."
           value={(table.getState().globalFilter as string) ?? ""}
           onChange={(event) => table.setGlobalFilter(event.target.value)}
-          className="h-10 w-full sm:w-[250px] lg:w-[300px] placeholder:text-muted-foreground"
+          className="h-10 w-full sm:w-[250px] lg:w-[350px] placeholder:text-muted-foreground"
         />
         {table.getColumn("gender") && (
           <DataTableFacetedFilter
