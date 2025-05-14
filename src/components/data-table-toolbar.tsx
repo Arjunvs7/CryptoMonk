@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { PlusCircle, X } from "lucide-react";
 import { DataTableViewOptions } from "./data-table-view-options";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
-import type { UserData } from "@/lib/types";
 import { allHobbies, places } from "@/lib/initial-data";
 
 interface DataTableToolbarProps<TData> {
