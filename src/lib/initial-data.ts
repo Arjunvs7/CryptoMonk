@@ -1,0 +1,98 @@
+import type { UserData } from "./types";
+
+export const initialData: UserData[] = [
+  {
+    id: "1",
+    name: "Alice Johnson",
+    email: "alice.j@gmail.com",
+    phone: "555-0101",
+    hobbies: ["Reading", "Hiking"],
+    place: "New York",
+    gender: "female",
+  },
+  {
+    id: "2",
+    name: "Bob Smith",
+    email: "bob.smith@gmail.com",
+    phone: "555-0102",
+    hobbies: ["Gaming", "Coding", "Music"],
+    place: "San Francisco",
+    gender: "male",
+  },
+  {
+    id: "3",
+    name: "Carol Williams",
+    email: "carol.w@gmail.com",
+    phone: "555-0103",
+    hobbies: ["Cooking", "Traveling"],
+    place: "London",
+    gender: "female",
+  },
+  {
+    id: "4",
+    name: "David Brown",
+    email: "d.brown@gmail.com",
+    phone: "555-0104",
+    hobbies: ["Sports", "Movies"],
+    place: "Chicago",
+    gender: "male",
+  },
+  {
+    id: "5",
+    name: "Eve Davis",
+    email: "eve.davis@gmail.com",
+    phone: "555-0105",
+    hobbies: ["Photography", "Art"],
+    place: "Paris",
+    gender: "female",
+  },
+  {
+    id: "6",
+    name: "Frank Miller",
+    email: "frank.m@gmail.com",
+    phone: "555-0106",
+    hobbies: ["Gardening", "Music"],
+    place: "Berlin",
+    gender: "male",
+  },
+  {
+    id: "7",
+    name: "Grace Wilson",
+    email: "g.wilson@gmail.com",
+    phone: "555-0107",
+    hobbies: ["Yoga", "Reading"],
+    place: "Tokyo",
+    gender: "female",
+  },
+  {
+    id: "8",
+    name: "Henry Moore",
+    email: "h.moore@gmail.com",
+    phone: "555-0108",
+    hobbies: ["Fishing", "Hiking", "Sports"],
+    place: "Sydney",
+    gender: "male",
+  },
+  {
+    id: "9",
+    name: "Isabel Taylor",
+    email: "isabel.t@gmail.com",
+    phone: "555-0109",
+    hobbies: ["Writing", "Music"],
+    place: "Toronto",
+    gender: "female",
+  },
+  {
+    id: "10",
+    name: "Jack Anderson",
+    email: "jack.a@gmail.com",
+    phone: "555-0110",
+    hobbies: ["Coding", "Gaming"],
+    place: "Austin",
+    gender: "male",
+  },
+];
+
+export const places = Array.from(new Set(initialData.map(item => item.place))).sort();
+export const allHobbies = Array.from(new Set(initialData.flatMap(item => item.hobbies))).sort();
+
