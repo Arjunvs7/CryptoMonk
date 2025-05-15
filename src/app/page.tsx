@@ -81,7 +81,7 @@ export default function DataManagerPage() {
   return (
     <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold tracking-tight text-primary">React Data Manager</h1>
+        <h1 className="text-4xl font-bold tracking-tight text-primary">Cryptomonk Demo</h1>
         <p className="text-lg text-muted-foreground mt-2">
           A powerful and intuitive interface for managing your data.
         </p>

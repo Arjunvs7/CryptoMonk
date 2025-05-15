@@ -1,4 +1,4 @@
-# **App Name**: React Data Manager
+# **App Name**: cryptomonkey Demo
 
 ## Core Features:
 
