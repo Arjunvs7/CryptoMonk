@@ -1,5 +1,22 @@
 import type { UserData } from "./types";
 
+export const keralaDistricts: string[] = [
+  "Thiruvananthapuram",
+  "Kollam",
+  "Pathanamthitta",
+  "Alappuzha",
+  "Kottayam",
+  "Idukki",
+  "Ernakulam",
+  "Thrissur",
+  "Palakkad",
+  "Malappuram",
+  "Kozhikode",
+  "Wayanad",
+  "Kannur",
+  "Kasaragod",
+].sort();
+
 export const initialData: UserData[] = [
   {
     id: "1",
@@ -7,7 +24,7 @@ export const initialData: UserData[] = [
     email: "alice.j@gmail.com",
     phone: "555-0101",
     hobbies: ["Reading", "Hiking"],
-    place: "New York",
+    place: "Thiruvananthapuram",
     gender: "female",
   },
   {
@@ -16,7 +33,7 @@ export const initialData: UserData[] = [
     email: "bob.smith@gmail.com",
     phone: "555-0102",
     hobbies: ["Gaming", "Coding", "Music"],
-    place: "San Francisco",
+    place: "Kollam",
     gender: "male",
   },
   {
@@ -25,7 +42,7 @@ export const initialData: UserData[] = [
     email: "carol.w@gmail.com",
     phone: "555-0103",
     hobbies: ["Cooking", "Traveling"],
-    place: "London",
+    place: "Pathanamthitta",
     gender: "female",
   },
   {
@@ -34,7 +51,7 @@ export const initialData: UserData[] = [
     email: "d.brown@gmail.com",
     phone: "555-0104",
     hobbies: ["Sports", "Movies"],
-    place: "Chicago",
+    place: "Alappuzha",
     gender: "male",
   },
   {
@@ -43,7 +60,7 @@ export const initialData: UserData[] = [
     email: "eve.davis@gmail.com",
     phone: "555-0105",
     hobbies: ["Photography", "Art"],
-    place: "Paris",
+    place: "Kottayam",
     gender: "female",
   },
   {
@@ -52,7 +69,7 @@ export const initialData: UserData[] = [
     email: "frank.m@gmail.com",
     phone: "555-0106",
     hobbies: ["Gardening", "Music"],
-    place: "Berlin",
+    place: "Idukki",
     gender: "male",
   },
   {
@@ -61,7 +78,7 @@ export const initialData: UserData[] = [
     email: "g.wilson@gmail.com",
     phone: "555-0107",
     hobbies: ["Yoga", "Reading"],
-    place: "Tokyo",
+    place: "Ernakulam",
     gender: "female",
   },
   {
@@ -70,7 +87,7 @@ export const initialData: UserData[] = [
     email: "h.moore@gmail.com",
     phone: "555-0108",
     hobbies: ["Fishing", "Hiking", "Sports"],
-    place: "Sydney",
+    place: "Thrissur",
     gender: "male",
   },
   {
@@ -79,7 +96,7 @@ export const initialData: UserData[] = [
     email: "isabel.t@gmail.com",
     phone: "555-0109",
     hobbies: ["Writing", "Music"],
-    place: "Toronto",
+    place: "Palakkad",
     gender: "female",
   },
   {
@@ -88,11 +105,13 @@ export const initialData: UserData[] = [
     email: "jack.a@gmail.com",
     phone: "555-0110",
     hobbies: ["Coding", "Gaming"],
-    place: "Austin",
+    place: "Malappuram",
     gender: "male",
   },
 ];
 
-export const places = Array.from(new Set(initialData.map(item => item.place))).sort();
-export const allHobbies = Array.from(new Set(initialData.flatMap(item => item.hobbies))).sort();
+// Use the defined Kerala districts for the places filter and form dropdown
+export const places: string[] = keralaDistricts;
 
+// Hobbies are still derived from the initial data, or could be a predefined list too
+export const allHobbies = Array.from(new Set(initialData.flatMap(item => item.hobbies))).sort();
